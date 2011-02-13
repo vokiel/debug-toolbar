@@ -50,4 +50,4 @@ In my fork the bar is also hidded, and after you click again on Kohana logo to s
 
 Screenshot
 ----------
-![Debug-Toolbar](http://img602.imageshack.us/img602/3909/kohanadebugtoolbar.png "Kohana Debug-Toolbar")
+![Debug-Toolbar](http://img406.imageshack.us/img406/7311/kohana31debugtoolbar.png "Kohana 3.1 Debug-Toolbar")
