@@ -87,7 +87,7 @@ class DebugToolbar
 			$template->set('benchmarks', self::get_benchmarks());
 		}
 
-		if ($output = Request::instance()->response and self::is_enabled())
+		if ($output = Request::initial()->response and self::is_enabled())
 		{
 			// Try to add css just before the </head> tag
 			if (stripos($output, '</head>') !== FALSE)
@@ -111,7 +111,7 @@ class DebugToolbar
 				$output .= $template->render();
 			}
 
-			Request::instance()->response = $output;
+			Request::initial()->response = $output;
 		}
 		else
 		{
@@ -385,7 +385,7 @@ class DebugToolbar
 	public static function is_enabled()
 	{
 		// Don't auto render toolbar for ajax requests
-		if (Request::$is_ajax)
+		if (Request::is_ajax())
 			return FALSE;
 
 		// Don't auto render toolbar if $_GET['debug'] = 'false'
