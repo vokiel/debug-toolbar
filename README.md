@@ -1,5 +1,9 @@
-Little fork for debug-toolbar
-=============================
+Little fork for Debug-Toolbar for Kohana 3.1 
+=============================================
+
+This is Kohana 3.1 version, for version 3.0.x see [master tree](https://github.com/vokiel/debug-toolbar).
+----------------------------------------------------------------------------------------------------
+
 I've added some features and improved little problems.
 
 Installation
@@ -13,9 +17,9 @@ Enable module in `bootstrap.php`
 	));
 	
 Add this call in your `bootstrap.php` just before `echo Request::instance()->response`  or similar:
-	Debugtoolbar::render();
+	DebugToolbar::render(TRUE);
 
-Of course you can get Debug Toolbar by cust calling `echo Debugtoolbar::render();` somewhere in your view files. 
+Of course you can get Debug Toolbar by cust calling `echo DebugToolbar::render();` somewhere in your view files. 
 
 Tips &amp; Tricks
 -----------------
@@ -37,7 +41,7 @@ Example structure:
 	- system
 In `modules/debug-toolbar/config/debug_toolbar.php` change the `$config['icon_path']` to `'../images/debug-toolbar'`
 
-Some changelog
+Changes
 --------------
 CSS - show toolbar buttons in one row, next to Kohana logo
 

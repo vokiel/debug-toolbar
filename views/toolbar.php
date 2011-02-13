@@ -324,7 +324,7 @@
 					<th>name</th>
 				</tr>
 				<?php foreach($routes as $name => $route):
-						$class = ($route == Request::initial()->route() ? ' current' : ''); ?>
+						$class = ($route == Request::current()->route() ? ' current' : ''); ?>
 				<tr class="<?php echo text::alternate('odd','even').$class?>">
 					<td><?php echo ++$r_counter ?></td>
 					<td><?php echo $name ?></td>
