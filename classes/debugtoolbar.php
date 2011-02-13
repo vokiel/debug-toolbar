@@ -87,7 +87,7 @@ class DebugToolbar
 			$template->set('benchmarks', self::get_benchmarks());
 		}
 
-		if ($output = Request::initial()->response and self::is_enabled())
+		if ($output = Request::current()->response() and self::is_enabled())
 		{
 			// Try to add css just before the </head> tag
 			if (stripos($output, '</head>') !== FALSE)
@@ -111,7 +111,7 @@ class DebugToolbar
 				$output .= $template->render();
 			}
 
-			Request::initial()->response = $output;
+			Request::current()->response($output);
 		}
 		else
 		{
