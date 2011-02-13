@@ -43,3 +43,7 @@ CSS - show toolbar buttons in one row, next to Kohana logo
 
 JS - in oryginal version, when you open a bar (for example `Benchmarks`) and then click on the Kohana logo, the debug-toolbar would slide left/right but the open bar is still open.
 In my fork the bar is also hidded, and after you click again on Kohana logo to show debug-toolbar, the previous open bar is restored back.
+
+Screenshot
+----------
+![Debug-Toolbar](http://img602.imageshack.us/img602/3909/kohanadebugtoolbar.png "Kohana Debug-Toolbar")
