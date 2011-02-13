@@ -1,5 +1,5 @@
 Little fork for debug-toolbar
------------------------------
+=============================
 I've added some features and improved little problems.
 
 Installation
@@ -19,7 +19,7 @@ Of course you can get Debug Toolbar by cust calling `echo Debugtoolbar::render()
 
 Tips &amp; Tricks
 -----------------
-In my default view file, I use this code to add the debug-toolbar or https://github.com/vokiel/profiler
+In my default view file, I use this code to add the debug-toolbar or [profiler](https://github.com/vokiel/profiler)
 	if (Kohana::$environment==Kohana::DEVELOPMENT){
 		echo View::factory('profiler/stats');
 		echo DebugToolbar::render();
