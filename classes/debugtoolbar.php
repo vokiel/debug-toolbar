@@ -385,7 +385,7 @@ class DebugToolbar
 	public static function is_enabled()
 	{
 		// Don't auto render toolbar for ajax requests
-		if (Request::is_ajax())
+		if (Request::current()->is_ajax())
 			return FALSE;
 
 		// Don't auto render toolbar if $_GET['debug'] = 'false'
