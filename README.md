@@ -44,6 +44,16 @@ CSS - show toolbar buttons in one row, next to Kohana logo
 JS - in oryginal version, when you open a bar (for example `Benchmarks`) and then click on the Kohana logo, the debug-toolbar would slide left/right but the open bar is still open.
 In my fork the bar is also hidded, and after you click again on Kohana logo to show debug-toolbar, the previous open bar is restored back.
 
+2011-03-13
+
+In SQL Queries table there is new feature - shows line number and file, where query (or model) was invoked.  
+
+Requires [profiler](https://github.com/vokiel/profiler), with [last changes] (https://github.com/vokiel/profiler/commit/883161caa52e4066ab2ad5d3e4cfb0f0076a9641)
+
 Screenshot
 ----------
-![Debug-Toolbar](http://img602.imageshack.us/img602/3909/kohanadebugtoolbar.png "Kohana Debug-Toolbar")
+![Debug-Toolbar](http://img406.imageshack.us/img406/7311/kohana31debugtoolbar.png "Kohana 3.1 Debug-Toolbar")
+
+2011-03-13
+
+![Debug-Toolbar](http://img847.imageshack.us/img847/4726/kohana31dtqueries.png "Kohana 3.1 Debug-Toolbar")

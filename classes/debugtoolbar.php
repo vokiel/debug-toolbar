@@ -177,7 +177,7 @@ class DebugToolbar
 			$group = arr::get($groups, $group_name, FALSE);
 
 			if ($group)
-			{					
+			{
 				$sub_time = $sub_memory = $sub_count = 0;
 				foreach ($group as $query => $tokens)
 				{
@@ -187,7 +187,7 @@ class DebugToolbar
 						$total = Profiler::total($token);
 						$sub_time += $total[0];
 						$sub_memory += $total[1];
-						$result[$name][] = array('name' => $query, 'time' => $total[0], 'memory' => $total[1]);
+						$result[$name][] = array('name' => $query, 'time' => $total[0], 'memory' => $total[1], 'line' => $total[2], 'file' => $total[3]);
 					}
 				}
 				$count += $sub_count;

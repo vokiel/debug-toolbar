@@ -110,8 +110,23 @@ var debugToolbar = {
 	collapse: function() {
 		debugToolbar.toggle('debug-toolbar-menu');
 		debugToolbar.toggleByClass('top');
+	},
+	toggleClass : function(obj,className){
+		if (obj.className.indexOf(className)< 0){
+			obj.className += ' '+className;
+		}else{
+			var eReg = new RegExp("(^|\\s)"+className+"(\\s|$)");
+			obj.className = obj.className.replace(eReg,'');
+		}
+	},
+	toggleNext : function(elm,tag,className){
+		debugToolbar.toggleClass(elm,'less');
+		elm.innerHTML = (elm.innerHTML=='more')? 'less' : 'more';  
+		var elements = debugToolbar.getElementsByClassName(className,elm.parentNode,tag);
+		for(var i=0, length = elements.length; i<length; i++){
+			debugToolbar.toggleClass(elements[i],'hide');
+		}
 	}
-
 };
 
 /*
