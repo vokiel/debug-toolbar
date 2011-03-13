@@ -142,6 +142,9 @@ div#kohana-debug-toolbar div#debug-benchmarks { padding: 3px 0px; }
 
 /* SQL queries */
 div#kohana-debug-toolbar div#debug-database { padding: 3px 0px; }
+div#kohana-debug-toolbar div#debug-database hide {display: none;}
+div#kohana-debug-toolbar div#debug-database span.more {cursor: pointer; color: green;}
+div#kohana-debug-toolbar div#debug-database span.less {cursor: pointer; color: red;}
 
 /* Vars & Config */
 div#kohana-debug-toolbar div#debug-vars {

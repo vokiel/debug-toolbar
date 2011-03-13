@@ -169,7 +169,7 @@
 			<table cellspacing="0" cellpadding="0">
 				<tr align="left">
 					<th>#</th>
-					<th>query</th>
+					<th>query / (line number) - file</th>
 					<th>time</th>
 					<th>memory</th>
 				</tr>
@@ -181,7 +181,11 @@
 					<? foreach ($stats as $num => $query): ?>
 					<tr class="<?php echo text::alternate('odd','even') ?>">
 						<td><?php echo $num+1 ?></td>
-						<td><?php echo $query['name'] ?></td>
+						<td>
+							<span onClick="debugToolbar.toggleNext(this,'p','more'); return false;" class="more">more</span>
+							<?php echo $query['name'] ?> 
+							<p class="more hide">(<?php echo $query['line'] ?>) - <?php echo $query['file'] ?></p> 
+						</td>
 						<td><?php echo number_format($query['time'] * 1000, 3) ?> ms</td>
 						<td><?php echo number_format($query['memory'] / 1024, 3) ?> kb</td>
 					</tr>
@@ -324,7 +328,7 @@
 					<th>name</th>
 				</tr>
 				<?php foreach($routes as $name => $route):
-						$class = ($route == Request::current()->route() ? ' current' : ''); ?>
+						$class = ($route == Request::instance()->route ? ' current' : ''); ?>
 				<tr class="<?php echo text::alternate('odd','even').$class?>">
 					<td><?php echo ++$r_counter ?></td>
 					<td><?php echo $name ?></td>
