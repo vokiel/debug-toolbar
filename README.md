@@ -49,6 +49,7 @@ JS - in oryginal version, when you open a bar (for example `Benchmarks`) and the
 In my fork the bar is also hidded, and after you click again on Kohana logo to show debug-toolbar, the previous open bar is restored back.
 
 2011-03-13
+
 In SQL Queries table there is new feature - shows line number and file, where query (or model) was invoked.  
 
 Screenshot
@@ -56,4 +57,5 @@ Screenshot
 ![Debug-Toolbar](http://img406.imageshack.us/img406/7311/kohana31debugtoolbar.png "Kohana 3.1 Debug-Toolbar")
 
 2011-03-13
-![Debug-Toolbar](http://img219.imageshack.us/img219/3189/kohana31debugtoolbarque.png "Kohana 3.1 Debug-Toolbar")
+
+![Debug-Toolbar](http://img847.imageshack.us/img847/4726/kohana31dtqueries.png "Kohana 3.1 Debug-Toolbar")
